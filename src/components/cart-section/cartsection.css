@@ -76,6 +76,8 @@
     border: 1px solid#1e2939;
     border-radius: 16px;
     gap: 16px;
+}
+.cartItem:not(:last-child) {
     margin-bottom: 16px;
 }
 .cartItem:hover{
@@ -84,7 +86,6 @@
 .cartItem img{
     display: block;
     width: 128px;
-    height: 192px;
     object-fit: cover;
     border-radius: 12px;
 }
@@ -273,5 +274,38 @@ button:hover .rightArrow{
     color: #05df72;
     line-height: 1.42857;
     text-align: center;
+}
+
+@media (max-width: 900px) {
+    .emptyCart, .cartWithItems{
+        padding-inline: 24px;
+    }
+    .cartItem img{
+        width: 96px;
+    }
+    .cartItemsAndSummary{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .emptyCart, .cartWithItems{
+        padding-inline: 16px;
+    }
+    .cartItem{
+        padding: 16px;
+    }
+    .QuantityAndPrice{
+        flex-direction: column;
+        gap: 16px;
+    }
+    .QuantityAndPrice{
+        align-items: start;
+    }
+    .priceAndTrash{
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
 

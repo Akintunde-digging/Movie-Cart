@@ -212,6 +212,12 @@
     font-weight: 700;
     line-height: 1.5;
 }
+.detailsPriceAndCart button:hover{
+    background-color: #c10007;
+}
+.detailsPriceAndCart button:hover .detailsCartIcon{
+    transform: scale(1.1);
+}
 .detailsCartIcon{
     display: block;
     font-size: 24px;   
@@ -289,4 +295,38 @@
 }
 .similarCard:hover img{
     transform: scale(1.09);
+}
+
+@media (max-width: 900px) {
+    .buttonImageAndDetails, .youMayAlsoLike{
+        padding-inline: 24px;
+    }
+    .imgAndDetails{
+        grid-template-columns: 1fr;
+    }
+    .imgAndDetails img{
+        width: 100%;
+        max-width: 448px;
+        align-self: center;
+        margin: 0 auto;
+    }
+    .detailsInfo h1{
+        font-size: 48px;
+    }
+    .trailerVideo iframe{
+        width: 100%;
+        height: 354px;
+    }
+    .similarMovies{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .buttonImageAndDetails, .youMayAlsoLike{
+        padding-inline: 16px;
+    }
+    .similarMovies{
+        grid-template-columns: 1fr;
+    }
 }

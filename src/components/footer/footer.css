@@ -96,3 +96,17 @@
     font-weight: 300;
     color: #99a1af;
 }
+
+@media (max-width: 900px) {
+    .footer{
+        padding-inline: 24px;
+    }
+    .logoToFollow{
+        grid-template-columns: 1fr;
+    }
+    .rightsAndPolicy{
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+}

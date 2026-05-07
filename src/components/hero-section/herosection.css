@@ -33,7 +33,6 @@
 .h1p{
     display: flex;
     flex-direction: column;
-    gap: 40px;
     position: relative;
     z-index: 2;
     
@@ -44,6 +43,12 @@
 }
 .heroSection h1{
     font-size: 72px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 24px;
+}
+.heroSection h1:hover{
+    color: #fb2c36;
 }
 .heroSection p{
     color: #d1d5dc;
@@ -86,6 +91,9 @@ button{
     gap: 8px;
     align-items: center;
 }
+.browseAndSign .signButton:hover{
+    backdrop-filter: blur(8px);
+}
 .playbutton{
     transition: transform 0.3s ease;
 }
@@ -94,4 +102,25 @@ button{
 }
 .browseAndSign a{
     text-decoration: none;
+}
+
+@media (max-width: 900px){
+    .heroSection{
+        padding-inline: 24px;
+    }
+    .heroSection h1{
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heroSection{
+        padding-inline: 16px;
+    }
+    .browseAndSign{
+        flex-direction: column;
+    }
+    .browseAndSign .signButton{
+        width: fit-content;
+    }
 }

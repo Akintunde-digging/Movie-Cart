@@ -52,11 +52,7 @@ useEffect(() => {
             </div>
             }
 
-            <div className="movieCardSection">
-                {featured
-    .filter(movie => movie.title.toLowerCase().includes(search.toLowerCase()))
-    .slice(0, limit)
-    .map(movie => (
+            <div className="movieCardSection">{featured .filter(movie => movie.title.toLowerCase().includes(search.toLowerCase())) .slice(0, limit) .map(movie => (
                 <div key={movie.id} className="movieCard">
                     <div className="movieImgAndOverlayWrapper">
                         <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title}/>

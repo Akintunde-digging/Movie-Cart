@@ -31,3 +31,16 @@
     font-size: 16px;
     color: #99a1af;
 }
+
+@media (max-width: 900px) {
+    .features{
+        flex-direction: column;
+        padding-inline: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .features{
+        padding-inline: 16px;
+    }
+}

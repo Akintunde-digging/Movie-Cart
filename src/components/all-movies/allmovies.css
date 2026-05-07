@@ -71,11 +71,39 @@
 .filters button .slider{
     font-size: 20px;
 }
-.allMovies .showing{
+.allMovies .showing {
     font-size: 16px;
     color: #99a1af;
-    position: absolute;
-    top: 290px;
-    left: 35px;
+    padding-inline: 32px;
+    margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+    .allMoviesHeading{
+        padding-inline: 24px;
+    }
+    .searchBarSection{
+        flex-direction: column;
+        padding-inline: 24px;
+    }
+    .filters{
+        width: 100%;
+    }
+    .filters button{
+        width: 100%;
+    }
+    .searchIcon{
+        top: 15px;
+        left: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .allMoviesHeading, .searchBarSection{
+        padding-inline: 16px;
+    }
+    .searchIcon{
+        left: 35px;
+    }
 }
 

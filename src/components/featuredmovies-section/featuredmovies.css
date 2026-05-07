@@ -8,7 +8,7 @@
 }
 .featuredHeading h1{
     font-size: 36px;
-    font-size: 70px;
+    font-weight: 700;
     line-height: 1.11111;
     margin-bottom: 16px;
 }
@@ -42,7 +42,7 @@
 }
 .movieDetails h3{
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     margin: 0 0 8px;
     white-space: nowrap;
     overflow: hidden;
@@ -193,3 +193,21 @@
     background-color: #ffffff4d;
 }
 
+@media (max-width:900px) {
+    .featuredMovies{
+        padding-inline: 24px;
+    }
+    .movieCardSection{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .featuredMovies{
+        padding-inline: 16px;
+    }
+    .movieCardSection{
+        grid-template-columns: 1fr;
+    }
+}
