@@ -121,6 +121,9 @@ nav a.active {
 }
 
 @media (max-width: 900px) {
+  nav{
+    padding-inline: 24px;
+  }
   .mobileRight{
     display: flex;
     align-items: center;
@@ -213,4 +216,10 @@ nav a.active {
       margin-block: 12px;
     }
    
+}
+
+@media (max-width: 480px) {
+  nav{
+    padding-inline: 16px;
+  }
 }
