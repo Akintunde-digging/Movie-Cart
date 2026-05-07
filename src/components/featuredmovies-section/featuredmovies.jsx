@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import {FaStar } from "react-icons/fa";
 import { LuShoppingCart, LuInfo } from "react-icons/lu";
 import { useCart } from "../context/cartcontext";
+import { useNavigate } from "react-router-dom";
 
 function FeaturedMovies({ limit, showHeading = true, showViewMore = true, search = "", onCountChange, showOverview = false}) {
 
@@ -15,6 +16,7 @@ function FeaturedMovies({ limit, showHeading = true, showViewMore = true, search
     const { addToCart } = useCart();
     const API_KEY = import.meta.env.VITE_API_KEY;
     const [allMovies, setAllMovies] = useState([]);
+    const navigate = useNavigate();
 
 useEffect(() => {
 
@@ -53,12 +55,12 @@ useEffect(() => {
             }
 
             <div className="movieCardSection">{featured .filter(movie => movie.title.toLowerCase().includes(search.toLowerCase())) .slice(0, limit) .map(movie => (
-                <div key={movie.id} className="movieCard">
+                <div key={movie.id} className="movieCard" onClick={() => navigate(`/movie/${movie.id}`)}>
                     <div className="movieImgAndOverlayWrapper">
                         <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title}/>
                         <div className="cardOverlay">
-                            <button onClick={() => addToCart(movie)}><LuShoppingCart className="overlayIcons"/></button>
-                            <Link to={`/movie/${movie.id}`} className="infoLink"><LuInfo className="overlayIcons"/></Link>
+                            <button onClick={(e) => { e.stopPropagation(); addToCart(movie)}}><LuShoppingCart className="overlayIcons"/></button>
+                            <Link to={`/movie/${movie.id}`} className="infoLink" onClick={(e) => e.stopPropagation()}><LuInfo className="overlayIcons"/></Link>
                         </div>
                     </div>
                     <div className="movieDetails">
@@ -73,7 +75,7 @@ useEffect(() => {
                        }
                        <div className="priceAndButton">
                             <p className="price">$ {(Math.floor(movie.vote_average * 2) + 0.99).toFixed(2)}</p>
-                            <button onClick={() => addToCart(movie)}>Add to Cart</button>
+                            <button onClick={(e) => { e.stopPropagation(); addToCart(movie); }}>Add to Cart</button>
                        </div>
                     </div>
                 </div>
