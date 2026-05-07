@@ -1,0 +1,195 @@
+
+.featuredMovies{
+    padding-block: 80px 48px;
+    padding-inline: 32px;
+}
+.featuredHeading{
+    margin-bottom: 48px;
+}
+.featuredHeading h1{
+    font-size: 36px;
+    font-size: 700;
+    line-height: 1.11111;
+    margin-bottom: 16px;
+}
+.featuredHeading p{
+    font-size: 18px;
+    color: #99a1af;
+    line-height: 1.55556;
+}
+.movieCardSection{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.movieCard{
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+.movieCard img{
+    display: block;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    transition: transform 0.5s ease;
+}
+.movieDetails{
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    background-color: #101828;
+    border-radius: 0 0 15px 15px;
+}
+.movieDetails h3{
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 0 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.ratingAndYear{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 14px;
+    margin: 0 0 8px;
+}
+.ratingAndYear .rating{
+    display: flex;
+    padding: 4px 8px;
+    color: #f0b100;
+    background-color: #f0b10033;
+    border-radius: 4px;
+    gap: 4px;
+}
+.ratingAndYear .year{
+    color: #99a1af;
+    font-weight: 400;
+}
+.movieDetails .genres{
+    display: flex;
+    gap: 4px;
+    color: #d1d5dc;
+    font-size: 12px;
+    font-weight: 300;
+    margin: 0 0 12px;
+    line-height: 1.33333;
+}
+.genrePill{
+    background-color: #ffffff1a;
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+.movieOverview{
+    color: #99a1af;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857;
+    margin-bottom: 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.priceAndButton{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.priceAndButton .price{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+.priceAndButton button{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.42857;
+    color: white;
+    background-color: #e7000b;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 12px;
+}
+.viewAllMovies{
+    margin-top: 48px;
+    text-align: center;
+}
+.viewAllMovies button{
+    color: #ffff;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px 32px;
+    background-color: #e7000b;
+    border: none;
+    border-radius: 12px; 
+}
+.movieImgAndOverlayWrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+}
+.movieImgAndOverlayWrapper:hover img{
+    transform: scale(1.05);   
+}
+
+.cardOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.movieCard:hover .cardOverlay {
+    opacity: 1;
+}
+
+.cardOverlay button{
+    padding: 12px;
+    background-color: #e7000b;
+    border: none;
+    border-radius: 50%;
+}
+.cardOverlay .infoLink{
+    background-color: #ffffff33;
+    padding: 12px;
+    border-radius: 50%;
+}
+.overlayIcons {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+    display: block;
+    color: #ffff;
+}
+.movieCard:hover {
+    outline: 2px solid #dc2626;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.movieCard:hover button{
+    cursor: default;
+}
+.cardOverlay button,
+.cardOverlay .infoLink {
+    transition: transform 0.3s ease;
+}
+
+.cardOverlay button:hover{
+    transform: scale(1.1);
+    background-color: #c10007;
+}
+.cardOverlay .infoLink:hover{
+    transform: scale(1.1);
+    background-color: #ffffff4d;
+}
+

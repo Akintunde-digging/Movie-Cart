@@ -1,0 +1,216 @@
+header{
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: black;
+  border: 1px solid #ffffff1a;
+}
+.headermovieCartLogo{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  
+}
+.headermovieCartLogo:hover .filmIconDiv{
+  background-color: #c10007;
+}
+.headermovieCartLogo h1{
+  font-size: 24px;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 32px;
+  height: 64px;
+  gap: 32px;
+}
+nav ul{
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  font-size: 16px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+ nav li{
+  padding: 8px 12px;
+}
+nav a{
+  text-decoration: none;
+  color:#d1d5dc;
+  border-bottom: 2px solid transparent;
+  padding-block: 8px;
+  padding-inline: 12px;
+}
+nav ul a:hover{
+  color: #fff;
+}
+nav a.active {
+    color: #fb2c36;
+    border-bottom: 2px solid #fb2c36;
+}
+.lsbutton{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: auto;
+}
+.loginButton button{
+  border: none;
+  color: #d1d5dc;;
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 8px 24px;
+}
+.signUpButton button{
+  background-color: red;
+  color: white;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 8px 24px;
+  border: none;
+  border-radius: 0.75rem;
+}
+.signUpButton button:hover{
+      background-color: #c10007;
+}
+.headerCart{
+  display: block;
+  align-items: center;
+  font-size: 24px;
+}
+.cartIconWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cartBadge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #e7000b;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 500;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mobileRight {
+    display: none;
+    z-index: 1000;
+}
+.navMenu{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  margin-left: 32px;
+  min-width: 0;
+}
+.lsbutton .border{
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .mobileRight{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+    .hamburger {
+        display: block;
+        font-size: 24px;
+        border: none;
+        color: #ffff;
+        background-color: transparent;
+    }
+    .lsbutton .cartIconWrapper{
+      display: none;
+    }
+    .headerCartLink{
+      display: none;
+    }
+    ul, .lsbutton {
+        display: none;
+    }
+    .navMenu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: fit-content;
+        background: black;
+        flex-direction: column;
+        z-index: 999;
+        margin-top: 65px;
+        padding: 16px;
+    }
+
+    .navMenu.open {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navMenu ul {
+        display: block;
+        gap: 24px;
+        width: 100%;
+        position: static;
+        transform: none;
+        align-items: center;
+    }
+    .navMenu li{
+      margin-bottom: 12px;
+    }
+    .navMenu ul li a{
+      display: block;
+      width: 100%;
+      padding: 0;
+    }
+    .navMenu li:hover{
+      background-color: #ffffff1a;
+      border-radius: 12px;
+    }
+    nav ul a.active{
+      color: #ffff;
+      border-bottom: none;
+    }
+    .navMenu ul li:has(a.active) {
+    background-color: #e7000b;
+    border-radius: 12px;
+    }
+    .navMenu .lsbutton {
+        display: block;
+        flex-direction: column;
+        width: 100%;
+    }
+    .loginButton button{
+      padding: 8px;
+      width: 100%;
+      text-align: start;
+      margin-bottom: 8px;
+    }
+    .loginButton button:hover{
+      background-color: #ffffff1a;
+      border-radius: 12px;
+    }
+    .signUpButton button{
+      width: 100%;
+    }
+    
+    .lsbutton .border{
+      display: block;
+      margin-block: 12px;
+    }
+   
+}

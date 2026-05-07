@@ -1,0 +1,97 @@
+.heroSection{
+    height: fit-content;
+    padding-inline: 32px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+}
+.heroSection::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+.trendingNow{
+    display: flex;
+    align-items: center;
+    background-color: #e7000bcc;
+    padding: 8px 16px;
+    width: fit-content;
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 4;
+    gap: 8px;
+    border-radius: 50px;
+}
+.heroSection .trendingNow p{
+    font-size: 14px;
+    font-weight: 600;
+}
+.h1p{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+    z-index: 2;
+    
+}
+.h1p a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.heroSection h1{
+    font-size: 72px;
+}
+.heroSection p{
+    color: #d1d5dc;
+    font-size: 20px;
+    line-height: 1.625;
+}
+button{
+    cursor: pointer;
+}
+.heroSection button{
+    padding: 16px 32px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+}
+.browseAndSign{
+    display: flex;
+    gap: 16px;
+    padding-bottom: 20px;
+    position: relative;
+    z-index: 3;
+}
+.browseAndSign .browseButton{
+    background-color: #e7000b;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.browseAndSign .browseButton:hover{
+    background-color: #c10007;
+}
+.browseButton:hover .playbutton{
+    transform: scale(1.1);
+}
+.browseAndSign .signButton{
+    background-color: #ffffff33;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.playbutton{
+    transition: transform 0.3s ease;
+}
+.playbutton, .shoppingbag{
+    font-size: 20px;
+}
+.browseAndSign a{
+    text-decoration: none;
+}

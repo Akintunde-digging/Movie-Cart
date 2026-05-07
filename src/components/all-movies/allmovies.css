@@ -1,0 +1,81 @@
+.allMovies{
+    display: flex;
+    flex-direction: column;
+}
+.allMoviesHeading{
+    padding-inline: 32px;
+    padding-top: 48px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+.allMoviesHeading h1{
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11111;
+    margin-bottom: 8px;
+}
+.allMoviesHeading p{
+    font-size: 16px;
+    color: #99a1af;
+}
+.searchBarSection{
+    display: flex;
+    gap: 16px;
+    padding-inline: 32px; 
+    position: relative;
+    align-items: center;
+}
+.searchBarSection input{
+    width: 100%;
+    padding-left: 48px;
+    padding-right: 16px;
+    padding-block: 12px;
+    color: #ffff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #101828;
+    border: 1px solid #1e2939;
+    border-radius: 12px;
+    outline: none;
+}
+.searchBarSection input:focus{
+    border: 1px solid #fb2c36;
+}
+.searchBarSection input::placeholder{
+    color: #99a1af;
+    font-weight: 300;
+}
+.searchIcon{
+    position: absolute;
+    left: 50px;
+    font-size: 20px;
+    color: #99a1af;
+    pointer-events: none;
+}
+.filters button{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background-color: #101828;
+    border: 1px solid #1e2939;
+    border-radius: 12px;
+    color: #ffff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+.filters button .slider{
+    font-size: 20px;
+}
+.allMovies .showing{
+    font-size: 16px;
+    color: #99a1af;
+    position: absolute;
+    top: 290px;
+    left: 35px;
+}
+
