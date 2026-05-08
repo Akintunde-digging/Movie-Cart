@@ -111,6 +111,17 @@
     padding: 8px 16px;
     border: none;
     border-radius: 12px;
+    transition: transform 0.5s ease;
+}
+.priceAndButton button:hover{
+    background-color: #c10007;
+    transform: scale(1.05);
+}
+.priceAndButton .addedToCart {
+    background-color: #008000;
+}
+.priceAndButton .addedToCart:hover{
+    background-color: #024202;
 }
 .viewAllMovies{
     margin-top: 48px;

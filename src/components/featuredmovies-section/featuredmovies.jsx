@@ -13,7 +13,7 @@ function FeaturedMovies({ limit, showHeading = true, showViewMore = true, search
     const shortNames = {
     "Science Fiction": "Sci-Fi",
     };
-    const { addToCart } = useCart();
+    const { addToCart, cart } = useCart();
     const API_KEY = import.meta.env.VITE_API_KEY;
     const [allMovies, setAllMovies] = useState([]);
     const navigate = useNavigate();
@@ -75,7 +75,7 @@ useEffect(() => {
                        }
                        <div className="priceAndButton">
                             <p className="price">$ {(Math.floor(movie.vote_average * 2) + 0.99).toFixed(2)}</p>
-                            <button onClick={(e) => { e.stopPropagation(); addToCart(movie); }}>Add to Cart</button>
+                            <button onClick={(e) => { e.stopPropagation(); addToCart(movie); }} className={cart.some(item => item.id === movie.id) ? "addedToCart" : ""}>{cart.some(item => item.id === movie.id) ? "Added to Cart" : "Add to Cart"}</button>
                        </div>
                     </div>
                 </div>

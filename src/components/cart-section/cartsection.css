@@ -276,6 +276,7 @@ button:hover .rightArrow{
     text-align: center;
 }
 
+
 @media (max-width: 900px) {
     .emptyCart, .cartWithItems{
         padding-inline: 24px;
