@@ -30,6 +30,7 @@
 .movieCard img{
     display: block;
     width: 100%;
+    height: 100%;
     border-radius: 15px 15px 0 0;
     transition: transform 0.5s ease;
 }
@@ -140,6 +141,7 @@
     position: relative;
     overflow: hidden;
     border-radius: 15px 15px 0 0;
+    aspect-ratio: 2/3;
 }
 .movieImgAndOverlayWrapper:hover img{
     transform: scale(1.05);   

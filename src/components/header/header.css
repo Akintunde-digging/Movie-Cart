@@ -152,7 +152,7 @@ nav a.active {
         right: 0;
         width: 100%;
         height: fit-content;
-        background: black;
+        background-color: black;
         flex-direction: column;
         z-index: 999;
         margin-top: 65px;
